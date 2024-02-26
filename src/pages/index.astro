@@ -1,16 +1,24 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Social from "../components/Social.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle="HOME" >
+	<section class="md:ml-[15%] mt-32">
+		<p class="text-7xl font-light">Sua casa com<br /> muito mais conforto.</p>
+		<p class="ml-2 mt-4 font-light">
+			Estrategia, tecnologia e design são os pilares do desenvolvimento de<br />
+			soluções online solidas que apoiam e fortalecem o negocio de<br />
+			nossos clientes
+		</p>
+		<div class="flex gap-2 justify-end mr-10 p-8" >
+			<Social label="instagram" url="/"/>
+			<Social label="facebook" url="/"/>
+			<Social label="X" url="/"/>
+		</div>
+	</section>
+	<section class="flex justify-end" >
+		<img src="/img.jpg" alt="moveis planejados" class="h-[1100px] w-auto object-cover">
+	</section>
+
+</BaseLayout>
