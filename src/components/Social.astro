@@ -4,7 +4,7 @@ interface Props {
   label: string
   alt?: string
 }
-const { url, label } = Astro.props
+const { url, label, alt } = Astro.props
 ---
 <div class="w-10 h-10 rounded-full bg-black">
   <a class="text-white h-full flex justify-center items-center" href={url} >
