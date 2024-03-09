@@ -1,24 +1,33 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-import Social from "../components/Social.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Social from "../components/Social.astro";
 ---
 
-<BaseLayout pageTitle="HOME" >
-	<section class="md:ml-[15%] mt-32">
-		<p class="text-7xl font-light">Sua casa com<br /> muito mais conforto.</p>
-		<p class="ml-2 mt-4 font-light">
-			Estrategia, tecnologia e design são os pilares do desenvolvimento de<br />
-			soluções online solidas que apoiam e fortalecem o negocio de<br />
-			nossos clientes
-		</p>
-		<div class="flex gap-2 justify-end mr-10 p-8" >
-			<Social label="I" url="/"/>
-			<Social label="F" url="/"/>
-			<Social label="X" url="/"/>
-		</div>
-	</section>
-	<section class="flex justify-end" >
-		<img src="/img.jpg" alt="moveis planejados" class="h-[60vw] w-auto object-cover">
-	</section>
-
+<BaseLayout pageTitle="HOME">
+  <section class="mt-16">
+    <p class="md:text-7xl text-5xl font-bold">
+      <span>Movéis</span>
+      <br />
+      <span>exlcusivos</span>
+    </p>
+    <p class="ml-2 mt-4 font-light max-w-3xl">
+      Na Marcenaria Galo, transformamos sonhos em móveis planejados sob medida,
+      criando ambientes únicos e funcionais. Nossa dedicação à excelência e
+      atenção aos detalhes garantem que cada projeto seja uma expressão
+      autêntica do seu estilo de vida. Explore nossas criações e descubra como
+      podemos transformar seu espaço em algo extraordinário.
+    </p>
+    <div class="flex gap-2 justify-end mr-10 p-8">
+      <Social label="I" url="/" />
+      <Social label="F" url="/" />
+      <Social label="X" url="/" />
+    </div>
+  </section>
+  <section class="flex justify-end">
+    <img
+      src="/img.jpg"
+      alt="moveis planejados"
+      class="h-[60vw] w-auto object-cover"
+    />
+  </section>
 </BaseLayout>

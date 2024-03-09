@@ -1,18 +1,26 @@
 ---
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-const { pageTitle } = Astro.props
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Container from "../components/Container.astro";
+const { pageTitle } = Astro.props;
 ---
+
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content={Astro.generator}>
-  <title>Marcenaria Galo | {pageTitle}</title>
-</head>
-<body >
-  <Header />
-  <slot />
-  <Footer />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Movéis plenanejados, Sorocaba e região. Marcenaria Galo. Marco Galo. Alberto Galo. Movéis sob medida."
+    />
+    <title>Marcenaria Galo | {pageTitle}</title>
+  </head>
+  <body class="bg-gray-50">
+    <Header />
+    <Container>
+      <slot />
+    </Container>
+    <Footer />
+  </body>
 </html>

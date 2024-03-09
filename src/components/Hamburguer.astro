@@ -1,0 +1,19 @@
+<div id="hamburguer" class="flex flex-col gap-1 justify-center h-[100%] hover:cursor-pointer" >
+  <div id="fist" class="w-8 bg-black h-1 rounded-md" ></div>
+  <div id="second" class="w-8 bg-black h-1 rounded-md" ></div>
+  <div id="third" class="w-8 bg-black h-1 rounded-md" ></div>
+</div>
+<script>
+  const hamburguerElement = document.querySelector("#hamburguer")
+  const dataDisplay = hamburguerElement?.getAttribute('data-display')
+
+  const fistDiv = document.querySelector("#fist")
+  const secondDiv = document.querySelector("#second")
+  const thirdDiv = document.querySelector("#third")
+  if (dataDisplay === 'hidden') {
+    secondDiv?.classList.remove("hidden")
+    secondDiv?.classList.add("block")
+  } else {
+
+  }
+</script>

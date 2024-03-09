@@ -1,11 +1,58 @@
 ---
-import Logo from "./Logo.astro"
+import Logo from "./Logo.astro";
+import Hamburguer from "./Hamburguer.astro";
 ---
-<header class="flex justify-between items-center max-w-7xl w-full m-auto p-8">
-  <Logo />
-  <nav class="flex gap-8">
-    <a href="/">Início</a>
-    <a href="/">Sobre</a>
-    <a href="/">Contato</a>
-  </nav>
-</header>
+
+<div class="shadow-md bg-white">
+  <header
+    class="flex justify-between items-center w-full max-w-7xl m-auto px-8 py-2"
+  >
+    <Logo />
+    <nav class="gap-8 hidden md:flex">
+      <a href="/" id="home">Início</a>
+      <a href="/sobre" id="sobre">Sobre</a>
+      <a href="/contato" id="contato">Contato</a>
+    </nav>
+    <div class="md:hidden">
+      <Hamburguer />
+      <nav
+        id="nav-mobile-items"
+        class="gap-8 hidden absolute top-16 left-0 flex-col w-full text-center bg-white shadow-2xl py-4 z-10 animate-fade"
+      >
+        <a href="/" id="home">Início</a>
+        <a href="/sobre" id="sobre">Sobre</a>
+        <a href="/contato" id="contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+</div>
+<script>
+  const hamburguerElement = document.querySelector("#hamburguer");
+  const navMobileElement = document.querySelector("#nav-mobile-items");
+
+  const fistDiv = document.querySelector("#fist");
+  const secondDiv = document.querySelector("#second");
+  const thirdDiv = document.querySelector("#third");
+
+  hamburguerElement?.getAttribute("data-display");
+
+  if (!hamburguerElement?.getAttribute("data-display"))
+    hamburguerElement?.setAttribute("data-display", "hidden");
+
+  hamburguerElement?.addEventListener("click", () => {
+    if (navMobileElement?.classList.contains("hidden")) {
+      navMobileElement.classList.remove("hidden");
+      navMobileElement.classList.add("flex");
+      hamburguerElement.setAttribute("data-display", "flex");
+
+      secondDiv?.classList.remove("block");
+      secondDiv?.classList.add("hidden");
+    } else {
+      navMobileElement?.classList.remove("flex");
+      navMobileElement?.classList.add("hidden");
+      hamburguerElement.setAttribute("data-display", "hidden");
+      secondDiv?.classList.remove("hidden");
+      secondDiv?.classList.add("block");
+    }
+  });
+</script>
