@@ -1,9 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Social from "../components/Social.astro";
+import HomeCarousel from "@/components/HomeCarousel"
+import '@/styles/globals.css'
 ---
 
 <BaseLayout pageTitle="HOME">
+  <HomeCarousel client:load />
   <section class="mt-16">
     <p class="md:text-7xl text-5xl font-bold">
       <span>Movéis</span>
