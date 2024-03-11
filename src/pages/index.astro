@@ -18,9 +18,15 @@ import Social from "../components/Social.astro";
       podemos transformar seu espaço em algo extraordinário.
     </p>
     <div class="flex gap-2 justify-end mr-10 p-8">
-      <Social label="I" url="/" />
-      <Social label="F" url="/" />
-      <Social label="X" url="/" />
+      <a href="https://www.instagram.com/marcenariagalo/" class="max-h-10 max-w-10 overflow-hidden" >
+        <img src="/marcenaria-galo/instagram.svg" alt="insta logo">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100066701466577&locale=pt_BR" class="max-h-10 max-w-10 overflow-hidden" >
+        <img src="/marcenaria-galo/facebook.svg" alt="insta logo">
+      </a>
+      <a href="https://wa.me/5515981546011" class="max-h-10 max-w-10 overflow-hidden" >
+        <img src="/marcenaria-galo/whatsapp.svg" alt="insta logo">
+      </a>
     </div>
   </section>
   <section class="flex justify-end">
@@ -31,3 +37,10 @@ import Social from "../components/Social.astro";
     />
   </section>
 </BaseLayout>
+<style>
+  .img-link {
+    border-radius: 100%;
+    height: 64px;
+    width: 64px;
+  }
+</style>
