@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const imgs = await Astro.glob('../../public/imgs/*.jpg')
+---
+
+<BaseLayout pageTitle="GALERIA">
+  <main class="grid sm:grid-cols-2 md:grid-cols-3 grid-flow-row gap-4" >
+    {imgs.map(img => (
+      <div>
+        <img src={img.default.src} />  
+      </div>
+    ))}
+  </main>
+</BaseLayout>
