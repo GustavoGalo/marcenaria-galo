@@ -1,9 +1,37 @@
-<div class="shadow-2xl drop-shadow-2xl bg-white">
+---
+import Logo from "./Logo.astro";
+---
+
+<div class="shadow-2xl drop-shadow-2xl bg-black text-white">
   <footer
-    class="flex justify-between items-center w-full max-w-7xl m-auto p-4 h-20"
+    class="md:grid md:gap-0 gap-8 flex flex-col place-content-center grid-cols-3 w-full max-w-7xl m-auto py-32 px-4 h-20 mt-16"
   >
-    <div class="">
-      <a href="/marcenaria-galo/">link</a>
-    </div>
+    <nav class="gap-8 flex items-center">
+      <a href="/marcenaria-galo/" class="font-bold">INÍCIO</a>
+      <a href="/marcenaria-galo/sobre" class="font-bold">SOBRE</a>
+      <a href="/marcenaria-galo/contato" class="font-bold">CONTATO</a>
+      <a href="/marcenaria-galo/galeria" class="font-bold">GALERIA</a>
+    </nav>
+    <div class="grid place-content-center"><Logo /></div>
+    <nav class="flex gap-2 justify-center items-center mr-10 p-8">
+      <a
+        href="https://www.instagram.com/marcenariagalo/"
+        class="max-h-10 max-w-10 overflow-hidden"
+      >
+        <img src="/marcenaria-galo/instagram.svg" alt="insta logo" />
+      </a>
+      <a
+        href="https://www.facebook.com/profile.php?id=100066701466577&locale=pt_BR"
+        class="max-h-10 max-w-10 overflow-hidden"
+      >
+        <img src="/marcenaria-galo/facebook.svg" alt="insta logo" />
+      </a>
+      <a
+        href="https://wa.me/5515981546011"
+        class="max-h-10 max-w-10 overflow-hidden"
+      >
+        <img src="/marcenaria-galo/whatsapp.svg" alt="insta logo" />
+      </a>
+    </nav>
   </footer>
 </div>
